@@ -63,7 +63,6 @@ public class SettingsActivity extends LockablePreferenceActivity implements OnPr
 		patternLock.setChecked(mLockPatternUtils.isLockPatternEnabled());
 	}
 
-	@Override
 	public boolean onPreferenceClick(final Preference pref) {
 		final String prefKey = pref.getKey();
 		if ("account_types_screen".equals(prefKey) ||
@@ -162,7 +161,6 @@ public class SettingsActivity extends LockablePreferenceActivity implements OnPr
 		AutoRefreshService.sendWidgetRefresh(this);
 	}
 
-    @Override
     public boolean onPreferenceChange(Preference pref, Object newValue) {
         final String prefKey = pref.getKey();
         if ("notify_min_delta".equals(prefKey)) {

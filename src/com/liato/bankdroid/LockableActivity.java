@@ -30,6 +30,7 @@ import android.view.Window;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -142,15 +143,12 @@ public class LockableActivity extends Activity {
         AlphaAnimation animation = new AlphaAnimation(1, 0);
         animation.setDuration(350);
         animation.setAnimationListener(new AnimationListener() {
-            @Override
             public void onAnimationEnd(Animation animation) {
                 mProgressBar.setVisibility(View.GONE);
             }
 
-            @Override
             public void onAnimationRepeat(Animation animation) {}
 
-            @Override
             public void onAnimationStart(Animation animation) {}
         });
         mProgressBar.startAnimation(animation);
@@ -228,5 +226,5 @@ public class LockableActivity extends Activity {
                 launchPatternLock();
             }
         }
-    }   	
+    }
 }

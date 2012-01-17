@@ -151,7 +151,6 @@ public class ColorPickerPreference
 		return mValue;
 	}
 
-	@Override
 	public void onColorChanged(int color) {
 		if (isPersistent()) {
 			persistInt(color);

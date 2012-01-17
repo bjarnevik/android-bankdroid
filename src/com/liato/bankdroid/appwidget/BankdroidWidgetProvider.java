@@ -285,7 +285,6 @@ public abstract class BankdroidWidgetProvider extends AppWidgetProvider {
                         this.mAppWidgetId = appWidgetId;
                     }
     
-                    @Override
                     public void run() {
                         Context context = getApplicationContext();
                         blurAppWidget(context, AppWidgetManager.getInstance(context), mAppWidgetId);

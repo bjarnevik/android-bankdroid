@@ -107,7 +107,6 @@ public class BankEditActivity extends LockableActivity implements OnClickListene
 		}
 	}
 
-	@Override
 	public void onClick(View v) {
 		if (v.getId() == R.id.btnSettingsCancel) {
 			this.finish();
@@ -123,7 +122,6 @@ public class BankEditActivity extends LockableActivity implements OnClickListene
 
 	}
 
-	@Override
 	public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int pos, long id) {
 		SELECTED_BANK = (Bank)parentView.getItemAtPosition(pos);
 		EditText edtUsername = (EditText)findViewById(R.id.edtBankeditUsername);
@@ -177,7 +175,6 @@ public class BankEditActivity extends LockableActivity implements OnClickListene
         }          
 	}
 
-	@Override
 	public void onNothingSelected(AdapterView<?> arg) {
 	}
 

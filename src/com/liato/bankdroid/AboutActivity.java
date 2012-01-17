@@ -52,7 +52,6 @@ public class AboutActivity extends LockableActivity implements OnClickListener {
 		super.onResume();
 	}
 
-    @Override
     public void onClick(View v) {
         String tag = (String)v.getTag();
         Intent i = new Intent(Intent.ACTION_VIEW);

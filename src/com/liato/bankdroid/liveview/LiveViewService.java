@@ -88,12 +88,10 @@ public class LiveViewService extends Service {
     private class LiveViewCallback extends IPluginServiceCallbackV1.Stub {
         Handler mCallbackHandler = new Handler();
 
-        @Override
         public String getPluginName() throws RemoteException {
             return mPluginName;
         }
 
-        @Override
         public void openInPhone(final String openInPhoneAction) throws RemoteException {
             mCallbackHandler.post(new Runnable() {
                 public void run() {
@@ -200,7 +198,6 @@ public class LiveViewService extends Service {
      */
     private ServiceConnection mServiceConnection = new ServiceConnection() {
 
-        @Override
         public void onServiceConnected(final ComponentName className, IBinder service) {
             Log.d(PluginConstants.LOG_TAG,
                     "Enter LiveViewService.ServiceConnection.onServiceConnected.");
@@ -225,7 +222,6 @@ public class LiveViewService extends Service {
             Log.d(PluginConstants.LOG_TAG, "Plugin registered. mPluginId: " + mPluginId);
         }
 
-        @Override
         public void onServiceDisconnected(ComponentName className) {
             Log.d(PluginConstants.LOG_TAG,
                     "Enter LiveViewService.ServiceConnection.onServiceDisconnected.");

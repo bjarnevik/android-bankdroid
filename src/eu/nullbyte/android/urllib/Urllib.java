@@ -152,7 +152,6 @@ public class Urllib {
     
     public void setKeepAliveTimeout(final int seconds) {
         httpclient.setKeepAliveStrategy(new ConnectionKeepAliveStrategy() { 
-            @Override
             public long getKeepAliveDuration(HttpResponse response, HttpContext arg1) {
                 // TODO Auto-generated method stub
                 return seconds;

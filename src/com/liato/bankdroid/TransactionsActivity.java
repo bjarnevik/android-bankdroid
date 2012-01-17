@@ -129,22 +129,18 @@ public class TransactionsActivity extends LockableActivity {
 			return convertView;
 		}		
 
-		@Override
 		public int getCount() {
 			return items.size();
 		}
 
-		@Override
 		public Object getItem(int position) {
 			return items.get(position);
 		}
 
-		@Override
 		public long getItemId(int position) {
 			return position;
 		}
 
-		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			Object item = getItem(position);
 			if (item == null) {

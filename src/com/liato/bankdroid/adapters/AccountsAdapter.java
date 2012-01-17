@@ -121,7 +121,6 @@ public class AccountsAdapter extends BaseAdapter {
 		return convertView;
 	}
 
-	@Override
 	public int getCount() {
 		int c = 0;
 		for(Bank g : banks) {
@@ -130,7 +129,6 @@ public class AccountsAdapter extends BaseAdapter {
 		return c;
 	}
 
-	@Override
 	public Object getItem(int position) {
 		if (banks.size() == 0) {
 			return null;
@@ -153,12 +151,10 @@ public class AccountsAdapter extends BaseAdapter {
 		return(null);
 	}
 
-	@Override
 	public long getItemId(int position) {
 		return position;
 	}
 
-	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		Object item = getItem(position);
 		if (item == null) {

@@ -197,7 +197,6 @@ public class WebViewActivity extends LockableActivity implements OnClickListener
         return super.onKeyDown(keyCode, event);
     }
 
-    @Override
     public void onClick(View v) {
         String tag = (String)v.getTag();
         if ("refresh".equals(tag)) {
