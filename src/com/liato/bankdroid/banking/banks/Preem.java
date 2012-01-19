@@ -15,6 +15,8 @@
  */
 package com.liato.bankdroid.banking.banks;
 
+import java.util.regex.Pattern;
+
 import android.content.Context;
 
 import com.liato.bankdroid.banking.Bank;
@@ -29,6 +31,7 @@ public class Preem extends IkanoPartnerBase {
 	private static final String NAME_SHORT = "preem";
 	private static final String URL = "https://partner.ikanobank.se/web/engines/page.aspx?structid=1437";
 	private static final int BANKTYPE_ID = Bank.PREEM;
+	private Pattern reTransactionsUrl = Pattern.compile("(page___\\d{1,}\\.aspx)\">(?:<span[^>]+>)?Mitt konto</", Pattern.CASE_INSENSITIVE);
 
     public Preem(Context context) {
         super(context);
@@ -37,6 +40,7 @@ public class Preem extends IkanoPartnerBase {
         super.NAME_SHORT = NAME_SHORT;
         super.BANKTYPE_ID = BANKTYPE_ID;
         super.URL = URL;
+        super.reTransactionsUrl = reTransactionsUrl;
         this.structId = "1437";
     }
 
