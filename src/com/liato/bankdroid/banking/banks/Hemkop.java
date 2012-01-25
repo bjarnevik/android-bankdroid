@@ -50,7 +50,7 @@ public class Hemkop extends Bank {
     private static final String TAG = "Hemkop";
     private static final String NAME = "Hemköp Kundkort";
     private static final String NAME_SHORT = "hemkop";
-    private static final String URL = "https://kundkort.hemkop.se/showdoc.asp?docid=1209";
+    private static final String URL = "http://kundkort.hemkop.se/showdoc.asp?docid=780&show=minasidor";
     private static final int BANKTYPE_ID = IBankTypes.HEMKOP;
     private static final int INPUT_TYPE_USERNAME = InputType.TYPE_CLASS_PHONE;
     private static final int INPUT_TYPE_PASSWORD = InputType.TYPE_CLASS_PHONE;
